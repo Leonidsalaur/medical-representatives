@@ -19,6 +19,7 @@ public class MedrepSecureauthserverApplication {
 		SpringApplication.run(MedrepSecureauthserverApplication.class, args);
 	}
 	
+	
 	@RequestMapping("/user")
 	public Principal user(Principal user) {
 		return user;
