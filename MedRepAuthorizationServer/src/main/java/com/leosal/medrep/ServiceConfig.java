@@ -13,7 +13,7 @@ public class ServiceConfig extends GlobalAuthenticationConfigurerAdapter{
 	@Override
 	public void init(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()//.passwordEncoder(passwordEncoder())
-		.withUser("leonid").password("pass1").roles("USER").and()
+		.withUser("leonid").password("pass1").roles("USER", "ADMIN").and()
 		.withUser("ilia").password("pass2").roles("USER", "OPERATOR");
 	}
 	
