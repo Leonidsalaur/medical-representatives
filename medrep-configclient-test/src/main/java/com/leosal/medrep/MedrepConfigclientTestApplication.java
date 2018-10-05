@@ -71,7 +71,7 @@ public class MedrepConfigclientTestApplication {
 	
 	@RequestMapping("/greeting")
 	public String showGreeting() {
-		System.out.println("TestService/greeting....");
+		//System.out.println("TestService/greeting....");
 		return greeting;
 	}
 }

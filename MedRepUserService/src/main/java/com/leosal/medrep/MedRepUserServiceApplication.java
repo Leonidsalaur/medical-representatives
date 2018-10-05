@@ -43,7 +43,7 @@ public class MedRepUserServiceApplication {
 	@PreAuthorize("#oauth2.hasScope('data_read') and hasAuthority('ROLE_ADMIN')")
 	public String getCurrentUser() {
 		
-		ResponseEntity<String> greeting = webTemplate.getForEntity("http://localhost:9010/tests/greeting", String.class);
+		ResponseEntity<String> greeting = webTemplate.getForEntity("http://MedrepTest/tests/greeting", String.class);
 		
 		return "This is current user: " + greeting.getBody();
 	}

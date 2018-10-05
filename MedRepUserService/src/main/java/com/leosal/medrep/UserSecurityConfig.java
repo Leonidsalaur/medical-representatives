@@ -1,6 +1,7 @@
 package com.leosal.medrep;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.expression.method.MethodSecurityExpressionHandler;
@@ -38,6 +39,7 @@ public class UserSecurityConfig extends GlobalMethodSecurityConfiguration {
 		return new OAuth2MethodSecurityExpressionHandler();
 	}
 	
+	@LoadBalanced
 	@Bean
 	public RestTemplate serviceComunicationRestTemplate() {
 		ResourceOwnerPasswordResourceDetails resourceDetails = new ResourceOwnerPasswordResourceDetails();
@@ -52,6 +54,8 @@ public class UserSecurityConfig extends GlobalMethodSecurityConfiguration {
 		resourceDetails.setPassword(restPassword);
 		
 		OAuth2RestTemplate template  = new OAuth2RestTemplate(resourceDetails);
+		
+		System.out.println("OAuth2RestTemplate created");
 		
 		return template;
 	}
