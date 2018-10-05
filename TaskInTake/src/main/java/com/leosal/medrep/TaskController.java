@@ -14,8 +14,8 @@ public class TaskController {
 	
 	@RequestMapping(path="/run", method=RequestMethod.POST)
 	public @ResponseBody String launchTask(@RequestBody String s) {
-		t.publichRequest(s);
-		System.out.println("request made");
+		t.publishRequest(s);
+		//System.out.println("request made");
 		
 		return "success";
 	}

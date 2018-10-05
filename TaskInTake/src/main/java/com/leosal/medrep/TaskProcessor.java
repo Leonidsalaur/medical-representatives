@@ -18,13 +18,13 @@ public class TaskProcessor {
 	@Autowired
 	private Source source;
 	
-	public void publichRequest(String payload) {
+	public void publishRequest(String payload) {
 		String url = "maven://com.leosal.medrep:medrep-messenger-scheduled-task:jar:0.0.1-SNAPSHOT";
 		List<String> input = new ArrayList<>(Arrays.asList(payload.split(",")));
 		
 		TaskLaunchRequest request = new TaskLaunchRequest(url, input, null, null, null);
 		
-		System.out.println("created lunch request");
+		System.out.println("created launch request with args: " + input);
 		
 		GenericMessage<TaskLaunchRequest> message = new GenericMessage<TaskLaunchRequest>(request);
 		
