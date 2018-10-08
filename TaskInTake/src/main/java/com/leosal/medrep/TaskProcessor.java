@@ -20,6 +20,7 @@ public class TaskProcessor {
 	
 	public void publishRequest(String payload) {
 		String url = "maven://com.leosal.medrep:medrep-messenger-scheduled-task:jar:0.0.1-SNAPSHOT";
+		//String url = "maven://com.leosal.medrep:medrep-messenger-scheduled-task-0.0.1-SNAPSHOT.jar";
 		List<String> input = new ArrayList<>(Arrays.asList(payload.split(",")));
 		
 		TaskLaunchRequest request = new TaskLaunchRequest(url, input, null, null, null);
