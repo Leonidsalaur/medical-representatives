@@ -10,19 +10,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
+import com.leosal.dbutils.GenericCRUD;
 import com.leosal.medrep.entity.MedrepUser;
 import com.leosal.medrep.services.UserService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
-public class UserRestController {
+public class UserRestController implements GenericCRUD<MedrepUser>{
 	
 	@Autowired
 	private UserService userService;
 	
-	@Autowired
-	private RestTemplate webTemplate;
+	@HystrixCommand(fallbackMethod="fall")
+	@RequestMapping("/ping")
+	public String ping() {
+		return "Users ping succeed";
+	}
 	
 	@RequestMapping("/current")
 	@PreAuthorize("#oauth2.hasScope('data_read') and hasAuthority('ROLE_ADMIN')")
@@ -46,12 +50,17 @@ public class UserRestController {
 	@RequestMapping(value="/save", method=RequestMethod.POST)
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	public @ResponseBody MedrepUser saveOrUpdate(@RequestBody MedrepUser user) {
+		System.out.println(user + " saved");
 		return userService.saveOrUpdate(user);
 	}
 	
 	@RequestMapping(value="/remove", method=RequestMethod.POST)
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
-	public @ResponseBody boolean removeUser(@RequestParam Long userId) {
-		return userService.remove(userId);
+	public @ResponseBody void remove(@RequestParam MedrepUser user) {
+		userService.remove(user);
+	}
+	
+	public String fall() {
+		return "Users ping failed";
 	}
 }

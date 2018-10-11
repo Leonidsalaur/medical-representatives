@@ -8,7 +8,7 @@ public class InstitutionsRestController {
 	
 	@RequestMapping("/ping")
 	public String ping() {
-		return "Ping success";
+		return "Institutions ping success";
 	}
 
 }

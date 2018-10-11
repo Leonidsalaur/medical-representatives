@@ -8,6 +8,6 @@ public class ProductsRestController {
 	
 	@RequestMapping("/ping")
 	public String ping() {
-		return "Ping succeed!";
+		return "Products ping succeed!";
 	}
 }

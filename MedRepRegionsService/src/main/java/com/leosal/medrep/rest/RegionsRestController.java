@@ -8,6 +8,6 @@ public class RegionsRestController {
 	
 	@RequestMapping("/ping")
 	public String ping() {
-		return "Ping succeed!";
+		return "Regions ping succeed!";
 	}
 }
