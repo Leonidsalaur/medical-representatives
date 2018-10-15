@@ -15,6 +15,7 @@ import com.leosal.medrep.entity.Advert;
 import com.leosal.medrep.services.AdvertsService;
 
 @RestController
+@RequestMapping("/adverts")
 public class AdvertsRestController implements GenericCRUD<Advert>{
 	
 	@Autowired

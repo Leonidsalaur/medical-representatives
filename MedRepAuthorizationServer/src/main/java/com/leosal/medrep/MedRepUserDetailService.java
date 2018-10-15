@@ -61,10 +61,17 @@ public class MedRepUserDetailService implements UserDetailsService {
 			user.setLogin(username);
 			user.setPassword("pass2");
 			user.setRoles(Arrays.asList("USER", "OPERATOR"));
-		} else if(internalUser.equals(username)) {
+		}else if("diana".equals(username)) {
 			user = new MedrepUser();
 			user.setFirstName("Name " + username);
 			user.setId(3l);
+			user.setLogin(username);
+			user.setPassword("pass3");
+			user.setRoles(Arrays.asList("USER"));
+		} else if(internalUser.equals(username)) {
+			user = new MedrepUser();
+			user.setFirstName("Name " + username);
+			user.setId(4l);
 			user.setLogin(username);
 			user.setPassword(internalPassword);
 			user.setRoles(Arrays.asList("ADMIN"));

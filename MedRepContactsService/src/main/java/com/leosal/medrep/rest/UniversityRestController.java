@@ -10,46 +10,37 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.leosal.dbutils.GenericCRUD;
-import com.leosal.medrep.entity.Advert;
-import com.leosal.medrep.services.AdvertsService;
+import com.leosal.medrep.entity.University;
+import com.leosal.medrep.services.UniversityService;
 
 @RestController
-public class AdvertsRestController implements GenericCRUD<Advert>{
-	
+@RequestMapping("/universities")
+public class UniversityRestController {
 	@Autowired
-	private AdvertsService advertService;
+	private UniversityService universityService;
 	
-	@RequestMapping("/ping")
-	public String ping() {
-		return "Adverts ping succeed!";
-	}
-
-	@Override
 	@RequestMapping("/find")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR') or hasAuthority('ROLE_USER')")
-	public @ResponseBody Advert findById(@RequestParam Long id) {
-		return advertService.findById(id);
+	public @ResponseBody University findById(@RequestParam Long id) {
+		return universityService.findById(id);
 	}
 
-	@Override
 	@RequestMapping("/findall")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR') or hasAuthority('ROLE_USER')")
-	public @ResponseBody List<Advert> findAll() {
-		return advertService.findAll();
+	public @ResponseBody List<University> findAll() {
+		return universityService.findAll();
 	}
 
-	@Override
 	@RequestMapping("/save")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR')")
-	public @ResponseBody Advert saveOrUpdate(@RequestBody Advert entity) {
-		return advertService.saveOrUpdate(entity);
+	public @ResponseBody University saveOrUpdate(@RequestBody University entity) {
+		return universityService.saveOrUpdate(entity);
 	}
 
-	@Override
 	@RequestMapping("/remove")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR')")
-	public void remove(@RequestBody Advert entity) {
-		advertService.remove(entity);
+	public void remove(@RequestBody University entity) {
+		universityService.remove(entity);
 	}
+
 }

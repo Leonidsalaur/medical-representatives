@@ -1,0 +1,531 @@
+2018-10-15 15:25:58.212  INFO [MedRepInstitutions,,,] 5724 --- [main] l.m.MedRepInstitutionsServiceApplication : The following profiles are active: default
+2018-10-15 15:25:58.225  INFO [MedRepInstitutions,,,] 5724 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@39d9314d: startup date [Mon Oct 15 15:25:58 EEST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@385c9627
+2018-10-15 15:25:58.785  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'scopedTarget.oauth2ClientContext' with a different definition: replacing [Root bean: class [null]; scope=session; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.security.oauth2.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientContextConfiguration; factoryMethodName=oauth2ClientContext; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.security.oauth2.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientContextConfiguration] with [Root bean: class [null]; scope=session; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.security.oauth2.client.OAuth2RestOperationsConfiguration$SessionScopedConfiguration$ClientContextConfiguration; factoryMethodName=oauth2ClientContext; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/security/oauth2/client/OAuth2RestOperationsConfiguration$SessionScopedConfiguration$ClientContextConfiguration.class]]
+2018-10-15 15:25:59.225  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ef63415b-0142-3539-a807-c6cb9125f36a
+2018-10-15 15:25:59.242  INFO [MedRepInstitutions,,,] 5724 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-10-15 15:25:59.426  INFO [MedRepInstitutions,,,] 5724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$68cd24cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:25:59.444  INFO [MedRepInstitutions,,,] 5724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:25:59.457  INFO [MedRepInstitutions,,,] 5724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b48e183' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:25:59.469  INFO [MedRepInstitutions,,,] 5724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityConfig' of type [com.leosal.medrep.configs.SecurityConfig$$EnhancerBySpringCGLIB$$384f2859] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:25:59.530  INFO [MedRepInstitutions,,,] 5724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:25:59.544  INFO [MedRepInstitutions,,,] 5724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ec395f8e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:25:59.570  INFO [MedRepInstitutions,,,] 5724 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.sleuth.instrument.web.client.TraceWebClientAutoConfiguration$TraceOAuthConfiguration' of type [org.springframework.cloud.sleuth.instrument.web.client.TraceWebClientAutoConfiguration$TraceOAuthConfiguration$$EnhancerBySpringCGLIB$$151beef0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:26:00.124  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9080 (http)
+2018-10-15 15:26:00.141  INFO [MedRepInstitutions,,,] 5724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-10-15 15:26:00.142  INFO [MedRepInstitutions,,,] 5724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-10-15 15:26:00.146  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_151/bin/server;C:/Program Files/Java/jre1.8.0_151/bin;C:/Program Files/Java/jre1.8.0_151/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\apache-maven-3.1.1\bin;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;;D:\_INSTALL\sts4\sts-4.0.0.RELEASE;;.]
+2018-10-15 15:26:00.280  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-10-15 15:26:00.281  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2056 ms
+2018-10-15 15:26:00.529  WARN [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-10-15 15:26:00.529  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-10-15 15:26:00.537  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@517acf3e
+2018-10-15 15:26:01.698  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-15 15:26:01.699  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2018-10-15 15:26:01.699  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'tracingFilter' to: [/*]
+2018-10-15 15:26:01.699  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'exceptionLoggingFilter' to: [/*]
+2018-10-15 15:26:01.699  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-15 15:26:01.699  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-15 15:26:01.700  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'OAuth2ClientContextFilter' to: [/*]
+2018-10-15 15:26:01.700  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-15 15:26:01.700  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-10-15 15:26:01.701  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2018-10-15 15:26:01.701  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-10-15 15:26:02.151  WARN [MedRepInstitutions,,,] 5724 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-10-15 15:26:02.152  INFO [MedRepInstitutions,,,] 5724 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-10-15 15:26:02.256  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-15 15:26:02.441  INFO [MedRepInstitutions,,,] 5724 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@39d9314d: startup date [Mon Oct 15 15:25:58 EEST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@385c9627
+2018-10-15 15:26:02.520  INFO [MedRepInstitutions,,,] 5724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/find]}" onto public com.leosal.medrep.entity.Institution com.leosal.medrep.rest.InstitutionsRestController.findById(java.lang.Long)
+2018-10-15 15:26:02.521  INFO [MedRepInstitutions,,,] 5724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ping]}" onto public java.lang.String com.leosal.medrep.rest.InstitutionsRestController.ping()
+2018-10-15 15:26:02.523  INFO [MedRepInstitutions,,,] 5724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-15 15:26:02.524  INFO [MedRepInstitutions,,,] 5724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-15 15:26:02.567  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-15 15:26:02.567  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-15 15:26:02.971  INFO [MedRepInstitutions,,,] 5724 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 27611bed-2488-428b-8d85-bf6dc49a64a3
+
+2018-10-15 15:26:03.139  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b9088f2, org.springframework.security.web.context.SecurityContextPersistenceFilter@691567ea, org.springframework.security.web.header.HeaderWriterFilter@496cc217, org.springframework.security.web.authentication.logout.LogoutFilter@2fd9fb34, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@34279b8a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34c7232c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16cb9989, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a914089, org.springframework.security.web.session.SessionManagementFilter@67b61834, org.springframework.security.web.access.ExceptionTranslationFilter@5fef0c19, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37d28938]
+2018-10-15 15:26:03.155  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@132e3594, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a2ae1ab, org.springframework.security.web.header.HeaderWriterFilter@2b6fb197, org.springframework.security.web.csrf.CsrfFilter@38159384, org.springframework.security.web.authentication.logout.LogoutFilter@55361f03, org.springframework.security.oauth2.client.filter.OAuth2ClientAuthenticationProcessingFilter@4f235107, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bec068b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d59e968, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28d739f1, org.springframework.security.web.session.SessionManagementFilter@2eb0cefe, org.springframework.security.web.access.ExceptionTranslationFilter@4eeab3e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@787988f4]
+2018-10-15 15:26:03.187  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-10-15 15:26:03.197  INFO [MedRepInstitutions,,,] 5724 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-10-15 15:26:03.198  INFO [MedRepInstitutions,,,] 5724 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-10-15 15:26:03.198  INFO [MedRepInstitutions,,,] 5724 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-15 15:26:03.583 DEBUG [MedRepInstitutions,,,] 5724 --- [main] c.s.i.h.SleuthHystrixConcurrencyStrategy : Current Hystrix plugins configuration is [concurrencyStrategy [com.netflix.hystrix.strategy.concurrency.HystrixConcurrencyStrategyDefault@787178b1],eventNotifier [com.netflix.hystrix.strategy.eventnotifier.HystrixEventNotifierDefault@24a4e2c5],metricPublisher [io.micrometer.core.instrument.binder.hystrix.MicrometerMetricsPublisher@27da994b],propertiesStrategy [com.netflix.hystrix.strategy.properties.HystrixPropertiesStrategyDefault@70f148dc],]
+2018-10-15 15:26:03.583 DEBUG [MedRepInstitutions,,,] 5724 --- [main] c.s.i.h.SleuthHystrixConcurrencyStrategy : Registering Sleuth Hystrix Concurrency Strategy.
+2018-10-15 15:26:03.660 DEBUG [MedRepInstitutions,,,] 5724 --- [main] o.s.c.s.i.r.SleuthRxJavaSchedulersHook   : Current RxJava plugins configuration is [schedulersHook [rx.plugins.RxJavaSchedulersHook@50122012],errorHandler [rx.plugins.RxJavaPlugins$1@569348e1],observableExecutionHook [rx.plugins.RxJavaObservableExecutionHookDefault@7db5b890],]
+2018-10-15 15:26:03.660 DEBUG [MedRepInstitutions,,,] 5724 --- [main] o.s.c.s.i.r.SleuthRxJavaSchedulersHook   : Registering Sleuth RxJava Schedulers Hook.
+2018-10-15 15:26:03.705  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-15 15:26:03.714  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2018-10-15 15:26:03.715  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2018-10-15 15:26:03.716  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2018-10-15 15:26:03.721  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2018-10-15 15:26:03.728  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2018-10-15 15:26:03.736  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=39d9314d,type=ConfigurationPropertiesRebinder]
+2018-10-15 15:26:03.747  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2018-10-15 15:26:03.762  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2018-10-15 15:26:03.810  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2018-10-15 15:26:04.080  INFO [MedRepInstitutions,,,] 5724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-10-15 15:26:04.080  INFO [MedRepInstitutions,,,] 5724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-10-15 15:26:04.167  INFO [MedRepInstitutions,,,] 5724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-10-15 15:26:04.168  INFO [MedRepInstitutions,,,] 5724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2018-10-15 15:26:04.326  INFO [MedRepInstitutions,,,] 5724 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-10-15 15:26:04.377  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2018-10-15 15:26:04.377  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2018-10-15 15:26:04.377  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2018-10-15 15:26:04.377  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2018-10-15 15:26:04.377  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2018-10-15 15:26:04.377  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2018-10-15 15:26:04.377  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2018-10-15 15:26:04.588  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2018-10-15 15:26:04.590  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2018-10-15 15:26:04.592  INFO [MedRepInstitutions,,,] 5724 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-10-15 15:26:04.595  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1539606364594 with initial instances count: 0
+2018-10-15 15:26:04.607  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MedRepInstitutions with eureka with status UP
+2018-10-15 15:26:04.608  INFO [MedRepInstitutions,,,] 5724 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1539606364608, current=UP, previous=STARTING]
+2018-10-15 15:26:04.610  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MEDREPINSTITUTIONS/MedRepInstitutions: registering service...
+2018-10-15 15:26:04.670  INFO [MedRepInstitutions,,,] 5724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9080 (http) with context path ''
+2018-10-15 15:26:04.671  INFO [MedRepInstitutions,,,] 5724 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9080
+2018-10-15 15:26:04.673  INFO [MedRepInstitutions,,,] 5724 --- [main] l.m.MedRepInstitutionsServiceApplication : Started MedRepInstitutionsServiceApplication in 8.063 seconds (JVM running for 8.661)
+2018-10-15 15:26:04.752  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MEDREPINSTITUTIONS/MedRepInstitutions - registration status: 204
+2018-10-15 15:26:34.591  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2018-10-15 15:26:34.591  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2018-10-15 15:26:34.591  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2018-10-15 15:26:34.591  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2018-10-15 15:26:34.591  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2018-10-15 15:26:34.591  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2018-10-15 15:26:34.591  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2018-10-15 15:26:34.618  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2018-10-15 15:29:25.397  INFO [MedRepInstitutions,,,] 5724 --- [http-nio-9080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-15 15:29:25.398  INFO [MedRepInstitutions,,,] 5724 --- [http-nio-9080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-15 15:29:25.426  INFO [MedRepInstitutions,,,] 5724 --- [http-nio-9080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2018-10-15 15:29:25.454  INFO [MedRepInstitutions,7dcaa89f53ceda20,7dcaa89f53ceda20,true] 5724 --- [http-nio-9080-exec-1] c.l.m.utils.CustomUserInfoTokenServices  : Getting user info from: http://localhost:9020/authorize/user
+2018-10-15 15:29:25.459  INFO [MedRepInstitutions,7dcaa89f53ceda20,7dcaa89f53ceda20,true] 5724 --- [http-nio-9080-exec-1] c.l.m.utils.CustomUserInfoTokenServices  : AAAAAA token=eb5cf058-3c33-4cd9-a8dc-3a9b13bc6b27
+2018-10-15 15:29:25.459  INFO [MedRepInstitutions,7dcaa89f53ceda20,7dcaa89f53ceda20,true] 5724 --- [http-nio-9080-exec-1] c.l.m.utils.CustomUserInfoTokenServices  : BBBBBBB path=http://localhost:9020/authorize/user, accessToken=eb5cf058-3c33-4cd9-a8dc-3a9b13bc6b27
+2018-10-15 15:29:25.560  INFO [MedRepInstitutions,7dcaa89f53ceda20,7dcaa89f53ceda20,true] 5724 --- [http-nio-9080-exec-1] c.l.m.utils.CustomUserInfoTokenServices  : Getting user info from: http://localhost:9020/authorize/user
+2018-10-15 15:29:25.564  INFO [MedRepInstitutions,7dcaa89f53ceda20,7dcaa89f53ceda20,true] 5724 --- [http-nio-9080-exec-1] c.l.m.utils.CustomUserInfoTokenServices  : AAAAAA token=eb5cf058-3c33-4cd9-a8dc-3a9b13bc6b27
+2018-10-15 15:29:25.564  INFO [MedRepInstitutions,7dcaa89f53ceda20,7dcaa89f53ceda20,true] 5724 --- [http-nio-9080-exec-1] c.l.m.utils.CustomUserInfoTokenServices  : BBBBBBB path=http://localhost:9020/authorize/user, accessToken=eb5cf058-3c33-4cd9-a8dc-3a9b13bc6b27
+2018-10-15 15:29:25.929  INFO [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] s.c.a.AnnotationConfigApplicationContext : Refreshing SpringClientFactory-localhost: startup date [Mon Oct 15 15:29:25 EEST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@39d9314d
+2018-10-15 15:29:25.973  INFO [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-10-15 15:29:26.179  INFO [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] c.netflix.config.ChainedDynamicProperty  : Flipping property: localhost.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2018-10-15 15:29:26.201  INFO [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-localhost
+2018-10-15 15:29:26.221  INFO [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] c.netflix.loadbalancer.BaseLoadBalancer  : Client: localhost instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2018-10-15 15:29:26.226  INFO [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2018-10-15 15:29:26.230  INFO [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client localhost initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@7a803b3c
+2018-10-15 15:29:26.286 DEBUG [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Created POST request for "http://localhost:9150/api/v2/spans"
+2018-10-15 15:29:26.286 DEBUG [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Setting request Accept header to [text/plain, application/json, application/*+json, */*]
+2018-10-15 15:29:26.287 DEBUG [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Writing [[B@19bfa13d] as "application/json" using [org.springframework.http.converter.ByteArrayHttpMessageConverter@2f1d2687]
+2018-10-15 15:30:36.402  INFO [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-10-15 15:30:36.402  INFO [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@39d9314d: startup date [Mon Oct 15 15:25:58 EEST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@385c9627
+2018-10-15 15:30:36.405  INFO [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MedRepInstitutions with eureka with status DOWN
+2018-10-15 15:30:36.405  WARN [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1539606636405, current=DOWN, previous=UP]
+2018-10-15 15:30:36.406  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MEDREPINSTITUTIONS/MedRepInstitutions: registering service...
+2018-10-15 15:30:36.407  INFO [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-10-15 15:30:36.409  INFO [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-10-15 15:30:36.410  INFO [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-10-15 15:30:36.413  INFO [MedRepInstitutions,,,] 5724 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MEDREPINSTITUTIONS/MedRepInstitutions - registration status: 204
+2018-10-15 15:30:37.401 DEBUG [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Created POST request for "http://localhost:9150/api/v2/spans"
+2018-10-15 15:30:37.402 DEBUG [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Setting request Accept header to [text/plain, application/json, application/*+json, */*]
+2018-10-15 15:30:37.405 DEBUG [MedRepInstitutions,,,] 5724 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Writing [[B@49e6b782] as "application/json" using [org.springframework.http.converter.ByteArrayHttpMessageConverter@2f1d2687]
+2018-10-15 15:30:37.414  WARN [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2018-10-15 15:30:37.414  INFO [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] s.c.a.AnnotationConfigApplicationContext : Closing SpringClientFactory-localhost: startup date [Mon Oct 15 15:29:25 EEST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@39d9314d
+2018-10-15 15:30:37.431  WARN [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] s.c.a.AnnotationConfigApplicationContext : Exception thrown from ApplicationListener handling ContextClosedEvent
+
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'eurekaAutoServiceRegistration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:208) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:288) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:258) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:180) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:142) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:400) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:406) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:354) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1000) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:967) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:76) [spring-cloud-context-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:967) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:133) [spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source) [na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.PerInterface.invoke(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.MBeanSupport.invoke(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(Unknown Source) [na:1.8.0_151]
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(Unknown Source) [na:1.8.0_151]
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(Unknown Source) [na:1.8.0_151]
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(Unknown Source) [na:1.8.0_151]
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(Unknown Source) [na:1.8.0_151]
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(Unknown Source) [na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.rmi.server.UnicastServerRef.dispatch(Unknown Source) [na:1.8.0_151]
+	at sun.rmi.transport.Transport$1.run(Unknown Source) [na:1.8.0_151]
+	at sun.rmi.transport.Transport$1.run(Unknown Source) [na:1.8.0_151]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_151]
+	at sun.rmi.transport.Transport.serviceCall(Unknown Source) [na:1.8.0_151]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source) [na:1.8.0_151]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source) [na:1.8.0_151]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source) [na:1.8.0_151]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_151]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:1.8.0_151]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_151]
+
+2018-10-15 15:30:37.433  INFO [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-localhost
+2018-10-15 15:30:37.438  INFO [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2018-10-15 15:30:37.440  WARN [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] .s.c.a.CommonAnnotationBeanPostProcessor : Invocation of destroy method failed on bean with name 'scopedTarget.eurekaClient': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'eurekaInstanceConfigBean': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2018-10-15 15:30:37.515  INFO [MedRepInstitutions,,,] 5724 --- [RMI TCP Connection(13)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-10-15 15:30:37.517  INFO [MedRepInstitutions,,,] 5724 --- [localhost-startStop-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2018-10-15 15:30:37.521  WARN [MedRepInstitutions,,,] 5724 --- [localhost-startStop-2] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@4ee06839}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.net.DualStackPlainSocketImpl.connect0(Native Method)
+ java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+ java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+ java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+ java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+ java.net.PlainSocketImpl.connect(Unknown Source)
+ java.net.SocksSocketImpl.connect(Unknown Source)
+ java.net.Socket.connect(Unknown Source)
+ java.net.Socket.connect(Unknown Source)
+ sun.net.NetworkClient.doConnect(Unknown Source)
+ sun.net.www.http.HttpClient.openServer(Unknown Source)
+ sun.net.www.http.HttpClient.openServer(Unknown Source)
+ sun.net.www.http.HttpClient.<init>(Unknown Source)
+ sun.net.www.http.HttpClient.New(Unknown Source)
+ sun.net.www.http.HttpClient.New(Unknown Source)
+ sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+ sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+ sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+ sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+ org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+ org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+ org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+ org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:687)
+ org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:132)
+ org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:622)
+ org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:112)
+ org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:123)
+ org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:115)
+ zipkin2.Call$Base.execute(Call.java:379)
+ zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:286)
+ zipkin2.reporter.AsyncReporter$Builder$1.run(AsyncReporter.java:190)
+2018-10-15 15:30:37.522  WARN [MedRepInstitutions,,,] 5724 --- [localhost-startStop-2] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2018-10-15 15:30:37.522  WARN [MedRepInstitutions,,,] 5724 --- [localhost-startStop-2] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2018-10-15 15:30:37.528  INFO [MedRepInstitutions,,,] 5724 --- [Thread-17] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2018-10-15 15:30:42.991  INFO [MedRepInstitutions,,,] 11668 --- [main] l.m.MedRepInstitutionsServiceApplication : The following profiles are active: default
+2018-10-15 15:30:43.006  INFO [MedRepInstitutions,,,] 11668 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c45d770: startup date [Mon Oct 15 15:30:43 EEST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@217ed35e
+2018-10-15 15:30:43.477  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'scopedTarget.oauth2ClientContext' with a different definition: replacing [Root bean: class [null]; scope=session; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.security.oauth2.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientContextConfiguration; factoryMethodName=oauth2ClientContext; initMethodName=null; destroyMethodName=(inferred); defined in org.springframework.security.oauth2.config.annotation.web.configuration.OAuth2ClientConfiguration$OAuth2ClientContextConfiguration] with [Root bean: class [null]; scope=session; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.security.oauth2.client.OAuth2RestOperationsConfiguration$SessionScopedConfiguration$ClientContextConfiguration; factoryMethodName=oauth2ClientContext; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/security/oauth2/client/OAuth2RestOperationsConfiguration$SessionScopedConfiguration$ClientContextConfiguration.class]]
+2018-10-15 15:30:43.926  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ef63415b-0142-3539-a807-c6cb9125f36a
+2018-10-15 15:30:43.944  INFO [MedRepInstitutions,,,] 11668 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-10-15 15:30:44.143  INFO [MedRepInstitutions,,,] 11668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$4682a229] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:30:44.154  INFO [MedRepInstitutions,,,] 11668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:30:44.161  INFO [MedRepInstitutions,,,] 11668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@17461db' of type [org.springframework.security.oauth2.provider.expression.OAuth2MethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:30:44.166  INFO [MedRepInstitutions,,,] 11668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityConfig' of type [com.leosal.medrep.configs.SecurityConfig$$EnhancerBySpringCGLIB$$1604a5b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:30:44.183  INFO [MedRepInstitutions,,,] 11668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:30:44.199  INFO [MedRepInstitutions,,,] 11668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c9eedcec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:30:44.219  INFO [MedRepInstitutions,,,] 11668 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.sleuth.instrument.web.client.TraceWebClientAutoConfiguration$TraceOAuthConfiguration' of type [org.springframework.cloud.sleuth.instrument.web.client.TraceWebClientAutoConfiguration$TraceOAuthConfiguration$$EnhancerBySpringCGLIB$$f2d16c4e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-15 15:30:44.685  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9080 (http)
+2018-10-15 15:30:44.700  INFO [MedRepInstitutions,,,] 11668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-10-15 15:30:44.701  INFO [MedRepInstitutions,,,] 11668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-10-15 15:30:44.705  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_151/bin/server;C:/Program Files/Java/jre1.8.0_151/bin;C:/Program Files/Java/jre1.8.0_151/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\apache-maven-3.1.1\bin;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;;D:\_INSTALL\sts4\sts-4.0.0.RELEASE;;.]
+2018-10-15 15:30:44.838  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-10-15 15:30:44.839  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1833 ms
+2018-10-15 15:30:45.262  WARN [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-10-15 15:30:45.262  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-10-15 15:30:45.281  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@33fb2d2
+2018-10-15 15:30:46.579  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-15 15:30:46.579  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2018-10-15 15:30:46.579  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'tracingFilter' to: [/*]
+2018-10-15 15:30:46.579  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'exceptionLoggingFilter' to: [/*]
+2018-10-15 15:30:46.580  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-15 15:30:46.580  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-10-15 15:30:46.580  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'OAuth2ClientContextFilter' to: [/*]
+2018-10-15 15:30:46.580  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-15 15:30:46.581  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-10-15 15:30:46.581  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpTraceFilter' to: [/*]
+2018-10-15 15:30:46.581  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-10-15 15:30:47.027  WARN [MedRepInstitutions,,,] 11668 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-10-15 15:30:47.027  INFO [MedRepInstitutions,,,] 11668 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-10-15 15:30:47.128  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-15 15:30:47.308  INFO [MedRepInstitutions,,,] 11668 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c45d770: startup date [Mon Oct 15 15:30:43 EEST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@217ed35e
+2018-10-15 15:30:47.382  INFO [MedRepInstitutions,,,] 11668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/find]}" onto public com.leosal.medrep.entity.Institution com.leosal.medrep.rest.InstitutionsRestController.findById(java.lang.Long)
+2018-10-15 15:30:47.383  INFO [MedRepInstitutions,,,] 11668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/findall]}" onto public java.util.List<com.leosal.medrep.entity.Institution> com.leosal.medrep.rest.InstitutionsRestController.findAll(org.springframework.http.HttpHeaders)
+2018-10-15 15:30:47.384  INFO [MedRepInstitutions,,,] 11668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ping]}" onto public java.lang.String com.leosal.medrep.rest.InstitutionsRestController.ping()
+2018-10-15 15:30:47.387  INFO [MedRepInstitutions,,,] 11668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-15 15:30:47.387  INFO [MedRepInstitutions,,,] 11668 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-15 15:30:47.431  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-15 15:30:47.431  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-15 15:30:47.838  INFO [MedRepInstitutions,,,] 11668 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: afd8a317-1778-4ab7-8440-55c8a36e0278
+
+2018-10-15 15:30:48.076  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50bc3219, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d30007d, org.springframework.security.web.header.HeaderWriterFilter@5438fa43, org.springframework.security.web.authentication.logout.LogoutFilter@3dfd6220, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@6cbb7a7d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14de1901, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ce25e47, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@599f1b7, org.springframework.security.web.session.SessionManagementFilter@7e61e25c, org.springframework.security.web.access.ExceptionTranslationFilter@463afa6e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2dd178f3]
+2018-10-15 15:30:48.093  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**'], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d4a82, org.springframework.security.web.context.SecurityContextPersistenceFilter@12192604, org.springframework.security.web.header.HeaderWriterFilter@342ee097, org.springframework.security.web.csrf.CsrfFilter@5d7dd549, org.springframework.security.web.authentication.logout.LogoutFilter@6b70d1fb, org.springframework.security.oauth2.client.filter.OAuth2ClientAuthenticationProcessingFilter@14f060b8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6075b369, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@231cdda8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7a0ab480, org.springframework.security.web.session.SessionManagementFilter@6ac45c0c, org.springframework.security.web.access.ExceptionTranslationFilter@6b1321b7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@723e2d08]
+2018-10-15 15:30:48.130  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-10-15 15:30:48.139  INFO [MedRepInstitutions,,,] 11668 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-10-15 15:30:48.140  INFO [MedRepInstitutions,,,] 11668 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-10-15 15:30:48.140  INFO [MedRepInstitutions,,,] 11668 --- [main] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-15 15:30:48.460 DEBUG [MedRepInstitutions,,,] 11668 --- [main] c.s.i.h.SleuthHystrixConcurrencyStrategy : Current Hystrix plugins configuration is [concurrencyStrategy [com.netflix.hystrix.strategy.concurrency.HystrixConcurrencyStrategyDefault@3d1c933],eventNotifier [com.netflix.hystrix.strategy.eventnotifier.HystrixEventNotifierDefault@79be91eb],metricPublisher [io.micrometer.core.instrument.binder.hystrix.MicrometerMetricsPublisher@626c569b],propertiesStrategy [com.netflix.hystrix.strategy.properties.HystrixPropertiesStrategyDefault@684ce74c],]
+2018-10-15 15:30:48.460 DEBUG [MedRepInstitutions,,,] 11668 --- [main] c.s.i.h.SleuthHystrixConcurrencyStrategy : Registering Sleuth Hystrix Concurrency Strategy.
+2018-10-15 15:30:48.477 DEBUG [MedRepInstitutions,,,] 11668 --- [main] o.s.c.s.i.r.SleuthRxJavaSchedulersHook   : Current RxJava plugins configuration is [schedulersHook [rx.plugins.RxJavaSchedulersHook@3e03046d],errorHandler [rx.plugins.RxJavaPlugins$1@9b3be1c],observableExecutionHook [rx.plugins.RxJavaObservableExecutionHookDefault@74e497ae],]
+2018-10-15 15:30:48.477 DEBUG [MedRepInstitutions,,,] 11668 --- [main] o.s.c.s.i.r.SleuthRxJavaSchedulersHook   : Registering Sleuth RxJava Schedulers Hook.
+2018-10-15 15:30:48.517  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-10-15 15:30:48.525  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2018-10-15 15:30:48.526  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2018-10-15 15:30:48.527  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2018-10-15 15:30:48.531  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2018-10-15 15:30:48.539  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2018-10-15 15:30:48.546  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=5c45d770,type=ConfigurationPropertiesRebinder]
+2018-10-15 15:30:48.560  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2018-10-15 15:30:48.576  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2018-10-15 15:30:48.602  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2018-10-15 15:30:48.780  INFO [MedRepInstitutions,,,] 11668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-10-15 15:30:48.780  INFO [MedRepInstitutions,,,] 11668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-10-15 15:30:48.861  INFO [MedRepInstitutions,,,] 11668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-10-15 15:30:48.861  INFO [MedRepInstitutions,,,] 11668 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2018-10-15 15:30:48.991  INFO [MedRepInstitutions,,,] 11668 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-10-15 15:30:49.032  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2018-10-15 15:30:49.032  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2018-10-15 15:30:49.032  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2018-10-15 15:30:49.033  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2018-10-15 15:30:49.033  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2018-10-15 15:30:49.033  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2018-10-15 15:30:49.033  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2018-10-15 15:30:49.118  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2018-10-15 15:30:49.123  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2018-10-15 15:30:49.125  INFO [MedRepInstitutions,,,] 11668 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2018-10-15 15:30:49.129  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1539606649128 with initial instances count: 2
+2018-10-15 15:30:49.141  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MedRepInstitutions with eureka with status UP
+2018-10-15 15:30:49.142  INFO [MedRepInstitutions,,,] 11668 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1539606649142, current=UP, previous=STARTING]
+2018-10-15 15:30:49.144  INFO [MedRepInstitutions,,,] 11668 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MEDREPINSTITUTIONS/MedRepInstitutions: registering service...
+2018-10-15 15:30:49.174  INFO [MedRepInstitutions,,,] 11668 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MEDREPINSTITUTIONS/MedRepInstitutions - registration status: 204
+2018-10-15 15:30:49.193  INFO [MedRepInstitutions,,,] 11668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9080 (http) with context path ''
+2018-10-15 15:30:49.193  INFO [MedRepInstitutions,,,] 11668 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9080
+2018-10-15 15:30:49.195  INFO [MedRepInstitutions,,,] 11668 --- [main] l.m.MedRepInstitutionsServiceApplication : Started MedRepInstitutionsServiceApplication in 7.82 seconds (JVM running for 8.433)
+2018-10-15 15:31:07.722  INFO [MedRepInstitutions,,,] 11668 --- [http-nio-9080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-10-15 15:31:07.722  INFO [MedRepInstitutions,,,] 11668 --- [http-nio-9080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-10-15 15:31:07.746  INFO [MedRepInstitutions,,,] 11668 --- [http-nio-9080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-10-15 15:31:07.771  INFO [MedRepInstitutions,b4f3fdf3cdf2cc18,b4f3fdf3cdf2cc18,true] 11668 --- [http-nio-9080-exec-1] c.l.m.utils.CustomUserInfoTokenServices  : Getting user info from: http://localhost:9020/authorize/user
+2018-10-15 15:31:07.775  INFO [MedRepInstitutions,b4f3fdf3cdf2cc18,b4f3fdf3cdf2cc18,true] 11668 --- [http-nio-9080-exec-1] c.l.m.utils.CustomUserInfoTokenServices  : AAAAAA token=eb5cf058-3c33-4cd9-a8dc-3a9b13bc6b27
+2018-10-15 15:31:07.775  INFO [MedRepInstitutions,b4f3fdf3cdf2cc18,b4f3fdf3cdf2cc18,true] 11668 --- [http-nio-9080-exec-1] c.l.m.utils.CustomUserInfoTokenServices  : BBBBBBB path=http://localhost:9020/authorize/user, accessToken=eb5cf058-3c33-4cd9-a8dc-3a9b13bc6b27
+2018-10-15 15:31:08.630  INFO [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] s.c.a.AnnotationConfigApplicationContext : Refreshing SpringClientFactory-localhost: startup date [Mon Oct 15 15:31:08 EEST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c45d770
+2018-10-15 15:31:08.668  INFO [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-10-15 15:31:08.857  INFO [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] c.netflix.config.ChainedDynamicProperty  : Flipping property: localhost.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2018-10-15 15:31:08.873  INFO [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-localhost
+2018-10-15 15:31:08.889  INFO [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] c.netflix.loadbalancer.BaseLoadBalancer  : Client: localhost instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2018-10-15 15:31:08.894  INFO [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2018-10-15 15:31:08.897  INFO [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client localhost initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@383ac428
+2018-10-15 15:31:08.939 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Created POST request for "http://localhost:9150/api/v2/spans"
+2018-10-15 15:31:08.939 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Setting request Accept header to [text/plain, application/json, application/*+json, */*]
+2018-10-15 15:31:08.940 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Writing [[B@306c37ec] as "application/json" using [org.springframework.http.converter.ByteArrayHttpMessageConverter@3b57bac0]
+2018-10-15 15:32:53.295  INFO [MedRepInstitutions,959c07eddef12b15,959c07eddef12b15,true] 11668 --- [http-nio-9080-exec-3] c.l.m.utils.CustomUserInfoTokenServices  : Getting user info from: http://localhost:9020/authorize/user
+2018-10-15 15:32:53.301  INFO [MedRepInstitutions,959c07eddef12b15,959c07eddef12b15,true] 11668 --- [http-nio-9080-exec-3] c.l.m.utils.CustomUserInfoTokenServices  : AAAAAA token=d3792f61-3bb5-4e49-8ae4-495e46518d28
+2018-10-15 15:32:53.303  INFO [MedRepInstitutions,959c07eddef12b15,959c07eddef12b15,true] 11668 --- [http-nio-9080-exec-3] c.l.m.utils.CustomUserInfoTokenServices  : BBBBBBB path=http://localhost:9020/authorize/user, accessToken=d3792f61-3bb5-4e49-8ae4-495e46518d28
+2018-10-15 15:32:53.995 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Created POST request for "http://localhost:9150/api/v2/spans"
+2018-10-15 15:32:53.995 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Setting request Accept header to [text/plain, application/json, application/*+json, */*]
+2018-10-15 15:32:53.995 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Writing [[B@3f16bc74] as "application/json" using [org.springframework.http.converter.ByteArrayHttpMessageConverter@3b57bac0]
+2018-10-15 15:35:49.036  INFO [MedRepInstitutions,,,] 11668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-10-15 15:40:49.038  INFO [MedRepInstitutions,,,] 11668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-10-15 15:41:18.330  INFO [MedRepInstitutions,92ae3cb3e030432b,92ae3cb3e030432b,true] 11668 --- [http-nio-9080-exec-5] c.l.m.utils.CustomUserInfoTokenServices  : Getting user info from: http://localhost:9020/authorize/user
+2018-10-15 15:41:18.340  INFO [MedRepInstitutions,92ae3cb3e030432b,92ae3cb3e030432b,true] 11668 --- [http-nio-9080-exec-5] c.l.m.utils.CustomUserInfoTokenServices  : AAAAAA token=eb5cf058-3c33-4cd9-a8dc-3a9b13bc6b27
+2018-10-15 15:41:18.340  INFO [MedRepInstitutions,92ae3cb3e030432b,92ae3cb3e030432b,true] 11668 --- [http-nio-9080-exec-5] c.l.m.utils.CustomUserInfoTokenServices  : BBBBBBB path=http://localhost:9020/authorize/user, accessToken=eb5cf058-3c33-4cd9-a8dc-3a9b13bc6b27
+2018-10-15 15:41:19.233 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Created POST request for "http://localhost:9150/api/v2/spans"
+2018-10-15 15:41:19.233 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Setting request Accept header to [text/plain, application/json, application/*+json, */*]
+2018-10-15 15:41:19.233 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Writing [[B@67d2047c] as "application/json" using [org.springframework.http.converter.ByteArrayHttpMessageConverter@3b57bac0]
+2018-10-15 15:45:49.040  INFO [MedRepInstitutions,,,] 11668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-10-15 15:50:49.042  INFO [MedRepInstitutions,,,] 11668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-10-15 15:55:49.043  INFO [MedRepInstitutions,,,] 11668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-10-15 16:00:49.044  INFO [MedRepInstitutions,,,] 11668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-10-15 16:05:49.045  INFO [MedRepInstitutions,,,] 11668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-10-15 16:10:49.048  INFO [MedRepInstitutions,,,] 11668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-10-15 16:15:49.049  INFO [MedRepInstitutions,,,] 11668 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2018-10-15 16:16:18.553  INFO [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-10-15 16:16:18.553  INFO [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c45d770: startup date [Mon Oct 15 15:30:43 EEST 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@217ed35e
+2018-10-15 16:16:18.554  INFO [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MedRepInstitutions with eureka with status DOWN
+2018-10-15 16:16:18.554  WARN [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1539609378554, current=DOWN, previous=UP]
+2018-10-15 16:16:18.554  INFO [MedRepInstitutions,,,] 11668 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MEDREPINSTITUTIONS/MedRepInstitutions: registering service...
+2018-10-15 16:16:18.556  INFO [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-10-15 16:16:18.558  INFO [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-10-15 16:16:18.558  INFO [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2018-10-15 16:16:18.560  INFO [MedRepInstitutions,,,] 11668 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MEDREPINSTITUTIONS/MedRepInstitutions - registration status: 204
+2018-10-15 16:16:19.388 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Created POST request for "http://localhost:9150/api/v2/spans"
+2018-10-15 16:16:19.388 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Setting request Accept header to [text/plain, application/json, application/*+json, */*]
+2018-10-15 16:16:19.388 DEBUG [MedRepInstitutions,,,] 11668 --- [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] o.s.c.s.z.s.ZipkinRestTemplateWrapper    : Writing [[B@7c65f854] as "application/json" using [org.springframework.http.converter.ByteArrayHttpMessageConverter@3b57bac0]
+2018-10-15 16:16:19.563  WARN [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2018-10-15 16:16:19.563  INFO [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] s.c.a.AnnotationConfigApplicationContext : Closing SpringClientFactory-localhost: startup date [Mon Oct 15 15:31:08 EEST 2018]; parent: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c45d770
+2018-10-15 16:16:19.567  WARN [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] s.c.a.AnnotationConfigApplicationContext : Exception thrown from ApplicationListener handling ContextClosedEvent
+
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'eurekaAutoServiceRegistration': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:208) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:288) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:258) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:180) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:142) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:400) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:406) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:354) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1000) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:967) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:76) [spring-cloud-context-2.0.1.RELEASE.jar:2.0.1.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:954) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:961) [spring-beans-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1041) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1017) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:967) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:133) [spring-boot-2.0.5.RELEASE.jar:2.0.5.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.reflect.misc.Trampoline.invoke(Unknown Source) [na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.reflect.misc.MethodUtil.invoke(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.PerInterface.invoke(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.MBeanSupport.invoke(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(Unknown Source) [na:1.8.0_151]
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(Unknown Source) [na:1.8.0_151]
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(Unknown Source) [na:1.8.0_151]
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(Unknown Source) [na:1.8.0_151]
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(Unknown Source) [na:1.8.0_151]
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(Unknown Source) [na:1.8.0_151]
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(Unknown Source) [na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_151]
+	at sun.rmi.server.UnicastServerRef.dispatch(Unknown Source) [na:1.8.0_151]
+	at sun.rmi.transport.Transport$1.run(Unknown Source) [na:1.8.0_151]
+	at sun.rmi.transport.Transport$1.run(Unknown Source) [na:1.8.0_151]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_151]
+	at sun.rmi.transport.Transport.serviceCall(Unknown Source) [na:1.8.0_151]
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source) [na:1.8.0_151]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source) [na:1.8.0_151]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source) [na:1.8.0_151]
+	at java.security.AccessController.doPrivileged(Native Method) [na:1.8.0_151]
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:1.8.0_151]
+	at java.lang.Thread.run(Unknown Source) ~[na:1.8.0_151]
+
+2018-10-15 16:16:19.568  INFO [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-localhost
+2018-10-15 16:16:19.571  INFO [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2018-10-15 16:16:19.573  WARN [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] .s.c.a.CommonAnnotationBeanPostProcessor : Invocation of destroy method failed on bean with name 'scopedTarget.eurekaClient': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'eurekaInstanceConfigBean': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+2018-10-15 16:16:19.647  INFO [MedRepInstitutions,,,] 11668 --- [RMI TCP Connection(55)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-10-15 16:16:19.649  INFO [MedRepInstitutions,,,] 11668 --- [localhost-startStop-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2018-10-15 16:16:19.653  WARN [MedRepInstitutions,,,] 11668 --- [localhost-startStop-2] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [AsyncReporter{org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@5d29481e}] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.net.DualStackPlainSocketImpl.connect0(Native Method)
+ java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+ java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+ java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+ java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+ java.net.PlainSocketImpl.connect(Unknown Source)
+ java.net.SocksSocketImpl.connect(Unknown Source)
+ java.net.Socket.connect(Unknown Source)
+ java.net.Socket.connect(Unknown Source)
+ sun.net.NetworkClient.doConnect(Unknown Source)
+ sun.net.www.http.HttpClient.openServer(Unknown Source)
+ sun.net.www.http.HttpClient.openServer(Unknown Source)
+ sun.net.www.http.HttpClient.<init>(Unknown Source)
+ sun.net.www.http.HttpClient.New(Unknown Source)
+ sun.net.www.http.HttpClient.New(Unknown Source)
+ sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+ sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+ sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+ sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+ org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76)
+ org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+ org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)
+ org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:687)
+ org.springframework.cloud.sleuth.zipkin2.sender.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateSenderConfiguration.java:132)
+ org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:622)
+ org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender.post(RestTemplateSender.java:112)
+ org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:123)
+ org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender$HttpPostCall.doExecute(RestTemplateSender.java:115)
+ zipkin2.Call$Base.execute(Call.java:379)
+ zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:286)
+ zipkin2.reporter.AsyncReporter$Builder$1.run(AsyncReporter.java:190)
+2018-10-15 16:16:19.653  WARN [MedRepInstitutions,,,] 11668 --- [localhost-startStop-2] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2018-10-15 16:16:19.654  WARN [MedRepInstitutions,,,] 11668 --- [localhost-startStop-2] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [PollingServerListUpdater-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2018-10-15 16:16:19.661  INFO [MedRepInstitutions,,,] 11668 --- [Thread-17] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
