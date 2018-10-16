@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="MedRep_Persist">
+		<jta-data-source>jdbc/worwagpharma</jta-data-source>
+		<class>com.leosal.medrepear.entity.Advert</class>
+		<class>com.leosal.medrepear.entity.DistribInstit</class>
+		<class>com.leosal.medrepear.entity.EducType</class>
+		<class>com.leosal.medrepear.entity.EventAdvert</class>
+		<class>com.leosal.medrepear.entity.EventGift</class>
+		<class>com.leosal.medrepear.entity.EventPerson</class>
+		<class>com.leosal.medrepear.entity.EventProduct</class>
+		<class>com.leosal.medrepear.entity.EventType</class>
+		<class>com.leosal.medrepear.entity.Event</class>
+		<class>com.leosal.medrepear.entity.InstitType</class>
+		<class>com.leosal.medrepear.entity.Institution</class>
+		<class>com.leosal.medrepear.entity.MReceiver</class>
+		<class>com.leosal.medrepear.entity.MedCategory</class>
+		<class>com.leosal.medrepear.entity.Message</class>
+		<class>com.leosal.medrepear.entity.MimeType</class>
+		<class>com.leosal.medrepear.entity.PersonType</class>
+		<class>com.leosal.medrepear.entity.Person</class>
+		<class>com.leosal.medrepear.entity.PersonsRegion</class>
+		<class>com.leosal.medrepear.entity.Product</class>
+		<class>com.leosal.medrepear.entity.Region</class>
+		<class>com.leosal.medrepear.entity.Report</class>
+		<class>com.leosal.medrepear.entity.Sale</class>
+		<class>com.leosal.medrepear.entity.Specialty</class>
+		<class>com.leosal.medrepear.entity.University</class>
+		<class>com.leosal.medrepear.entity.PersonPriv</class>
+		<class>com.leosal.medrepear.entity.DistribProd</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<property name="eclipselink.jdbc.batch-writing" value="JDBC"/>
+		</properties>
+	</persistence-unit>
+</persistence>

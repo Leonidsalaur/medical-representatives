@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="MedRep_EJB">
+        <wb-resource deploy-path="/" source-path="/ejbModule" tag="defaultRootSource"/>
+        <property name="java-output-path" value="/MedRep_EJB/build/classes"/>
+        <property name="ClientProject" value="MedRep_EJBClient"/>
+        <property name="ClientJARURI" value="MedRep_EJBClient.jar"/>
+    </wb-module>
+</project-modules>

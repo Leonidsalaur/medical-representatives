@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<system-libraries>
+    <library path="G:/Java/GlassFish/glassfish4/glassfish/modules/org.eclipse.persistence.jpa.jar" source="C:/Users/Leonid/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.jpa/2.5.0-RC2/org.eclipse.persistence.jpa-2.5.0-RC2-sources.jar"/>
+</system-libraries>
