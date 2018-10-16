@@ -1,0 +1,4 @@
+javax.ws.rs.ServerErrorException: HTTP 500 Internal Server Error
+	at com.leosal.medrepear.service.RestManager.login(RestManager.java:102)
+	at com.leosal.medrepear.frames.AuthFrame$4.run(AuthFrame.java:98)
+	at java.lang.Thread.run(Thread.java:748)
