@@ -4,31 +4,27 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.leosal.medrep.entity.Specialty;
+import com.leosal.medrep.dto.SpecialtyDTO;
 
 @Service
 public class SpecialtyServiceImpl implements SpecialtyService {
 
-	@Override
-	public Specialty findById(Long id) {
+	public SpecialtyDTO findById(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public List<Specialty> findAll() {
+	public List<SpecialtyDTO> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public Specialty saveOrUpdate(Specialty entity) {
+	public SpecialtyDTO saveOrUpdate(SpecialtyDTO entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public void remove(Specialty entity) {
+	public void remove(SpecialtyDTO entity) {
 		// TODO Auto-generated method stub
 
 	}

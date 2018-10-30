@@ -1,8 +1,13 @@
 package com.leosal.medrep.services;
 
-import com.leosal.dbutils.GenericCRUD;
-import com.leosal.medrep.entity.Specialty;
+import java.util.List;
 
-public interface SpecialtyService extends GenericCRUD<Specialty> {
+import com.leosal.medrep.dto.SpecialtyDTO;
+
+public interface SpecialtyService {
+	public SpecialtyDTO findById(Integer id);
+	public List<SpecialtyDTO> findAll();
+	public SpecialtyDTO saveOrUpdate(SpecialtyDTO entity);
+	public void remove(SpecialtyDTO entity);
 
 }

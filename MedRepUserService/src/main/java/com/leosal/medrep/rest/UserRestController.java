@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.leosal.dbutils.GenericCRUD;
+import com.leosal.medrep.dto.MedRepUserDTO;
 import com.leosal.medrep.entity.MedrepUser;
 import com.leosal.medrep.services.UserService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
-public class UserRestController implements GenericCRUD<MedrepUser>{
+public class UserRestController{
 	
 	@Autowired
 	private UserService userService;
@@ -37,7 +37,7 @@ public class UserRestController implements GenericCRUD<MedrepUser>{
 	
 	@RequestMapping("/findall")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
-	public @ResponseBody List<MedrepUser> findAll() {
+	public @ResponseBody List<MedRepUserDTO> findAll() {
 		return userService.findAll();
 	}
 	

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.leosal.medrep.entity.University;
+import com.leosal.medrep.dto.UniversityDTO;
 import com.leosal.medrep.services.UniversityService;
 
 @RestController
@@ -21,25 +21,25 @@ public class UniversityRestController {
 	
 	@RequestMapping("/find")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR') or hasAuthority('ROLE_USER')")
-	public @ResponseBody University findById(@RequestParam Long id) {
+	public @ResponseBody UniversityDTO findById(@RequestParam Integer id) {
 		return universityService.findById(id);
 	}
 
 	@RequestMapping("/findall")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR') or hasAuthority('ROLE_USER')")
-	public @ResponseBody List<University> findAll() {
+	public @ResponseBody List<UniversityDTO> findAll() {
 		return universityService.findAll();
 	}
 
 	@RequestMapping("/save")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR')")
-	public @ResponseBody University saveOrUpdate(@RequestBody University entity) {
+	public @ResponseBody UniversityDTO saveOrUpdate(@RequestBody UniversityDTO entity) {
 		return universityService.saveOrUpdate(entity);
 	}
 
 	@RequestMapping("/remove")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR')")
-	public void remove(@RequestBody University entity) {
+	public void remove(@RequestBody UniversityDTO entity) {
 		universityService.remove(entity);
 	}
 

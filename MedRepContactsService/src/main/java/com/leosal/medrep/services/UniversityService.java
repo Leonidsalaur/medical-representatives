@@ -1,8 +1,12 @@
 package com.leosal.medrep.services;
 
-import com.leosal.dbutils.GenericCRUD;
-import com.leosal.medrep.entity.University;
+import java.util.List;
 
-public interface UniversityService extends GenericCRUD<University> {
-	
+import com.leosal.medrep.dto.UniversityDTO;
+
+public interface UniversityService {
+	public UniversityDTO findById(Integer id);
+	public List<UniversityDTO> findAll();
+	public UniversityDTO saveOrUpdate(UniversityDTO entity);
+	public void remove(UniversityDTO entity);
 }

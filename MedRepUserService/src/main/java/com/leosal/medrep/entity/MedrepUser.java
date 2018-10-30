@@ -1,67 +1,199 @@
 package com.leosal.medrep.entity;
 
+import java.util.Date;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
 import com.leosal.dbutils.DBEntity;
 
+@Entity
+@Table(name="users")
 public class MedrepUser implements DBEntity{
 	
-	private Long id;
-	
-	private String firstName;
-	private String midName;
-	private String lastName;
-	private String password;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
+	@Column
+	private String address;
+	@Temporal(TemporalType.DATE)
+	@Column
+	private Date birthday;
+	@Column(columnDefinition = "TEXT")
+	private String comment;
+	@Column
+	private String firstname;
+	@Column(name="fiscal_code")
+	private String fiscalCode;
+	@Temporal(TemporalType.DATE)
+	@Column(name="hire_date")
+	private Date hireDate;
+	@Column(name="home_phone")
+	private String homePhone;
+	@Column
+	private String lastname;
+	@Column
 	private String login;
-	private String role;
+	@Column
+	private String mail;
+	@Column
+	private String midname;
+	@Column(name="mobile_phone")
+	private String mobilePhone;
+	@Column
+	private String password;
+	@Column
+	private String sex;
+	@Column(name="work_phone")
+	private String workPhone;
+	@OneToMany(mappedBy="user")
+	private Set<UserToRole> userToRoles;
+	@OneToMany(mappedBy="user")
+	private Set<Region> regions;
 	
-	public String getFirstName() {
-		return firstName;
+
+	public Integer getId() {
+		return id;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
-	public String getMidName() {
-		return midName;
+
+	public String getAddress() {
+		return address;
 	}
-	public void setMidName(String midName) {
-		this.midName = midName;
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
-	public String getLastName() {
-		return lastName;
+
+	public Date getBirthday() {
+		return birthday;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
-	public String getPassword() {
-		return password;
+
+	public String getComment() {
+		return comment;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getFiscalCode() {
+		return fiscalCode;
+	}
+
+	public void setFiscalCode(String fiscalCode) {
+		this.fiscalCode = fiscalCode;
+	}
+
+	public Date getHireDate() {
+		return hireDate;
+	}
+
+	public void setHireDate(Date hireDate) {
+		this.hireDate = hireDate;
+	}
+
+	public String getHomePhone() {
+		return homePhone;
+	}
+
+	public void setHomePhone(String homePhone) {
+		this.homePhone = homePhone;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
 	public String getLogin() {
 		return login;
 	}
+
 	public void setLogin(String login) {
 		this.login = login;
 	}
-	public String getRole() {
-		return role;
+
+	public String getMail() {
+		return mail;
 	}
-	public void setRole(String role) {
-		this.role = role;
+
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
-	public Long getId() {
-		return id;
+
+	public String getMidname() {
+		return midname;
 	}
-	public void setId(Long id) {
-		this.id = id;
+
+	public void setMidname(String midname) {
+		this.midname = midname;
 	}
-	
-	@Override
-	public String toString() {
-		return "MedrepUser [id=" + id + ", firstName=" + firstName + ", midName=" + midName + ", lastName=" + lastName
-				+ ", login=" + login + ", role=" + role + "]";
+
+	public String getMobilePhone() {
+		return mobilePhone;
 	}
-	
-	
+
+	public void setMobilePhone(String mobilePhone) {
+		this.mobilePhone = mobilePhone;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public String getWorkPhone() {
+		return workPhone;
+	}
+
+	public void setWorkPhone(String workPhone) {
+		this.workPhone = workPhone;
+	}
+
+	public Set<UserToRole> getUserToRoles() {
+		return userToRoles;
+	}
+
+	public void setUserToRoles(Set<UserToRole> userToRoles) {
+		this.userToRoles = userToRoles;
+	}
 
 }

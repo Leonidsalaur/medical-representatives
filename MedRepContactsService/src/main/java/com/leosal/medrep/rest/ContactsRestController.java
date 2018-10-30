@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.leosal.medrep.entity.Contact;
+import com.leosal.medrep.dto.ContactDTO;
 import com.leosal.medrep.services.ContactsService;
 
 @RestController
@@ -27,32 +27,32 @@ public class ContactsRestController{
 
 	@RequestMapping("/find")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR')  or hasAuthority('ROLE_USER')")
-	public @ResponseBody Contact findById(@RequestParam Long id) {
+	public @ResponseBody ContactDTO findById(@RequestParam Integer id) {
 		return contactsService.findById(id);
 	}
 
 	@RequestMapping("/findall")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR')  or hasAuthority('ROLE_USER')")
-	public @ResponseBody List<Contact> findAll() {
+	public @ResponseBody List<ContactDTO> findAll() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		
 		if(auth.getAuthorities().stream().anyMatch(r -> "ROLE_ADMIN,ROLE_OPERATOR".contains(r.getAuthority()))) {
 			return contactsService.findAll();
 		} else {
 			String login = auth.getName();
-			return contactsService.findByRepLogin(login);
+			return contactsService.findAllByUserLogin(login);
 		}
 	}
 
 	@RequestMapping("/save")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_USER')")
-	public @ResponseBody Contact saveOrUpdate(@RequestBody Contact entity) {
+	public @ResponseBody ContactDTO saveOrUpdate(@RequestBody ContactDTO entity) {
 		return contactsService.saveOrUpdate(entity);
 	}
 
 	@RequestMapping("/remove")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')  or hasAuthority('ROLE_USER')")
-	public void remove(Contact entity) {
+	public void remove(ContactDTO entity) {
 		contactsService.remove(entity);
 	}
 	

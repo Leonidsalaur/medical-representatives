@@ -4,31 +4,27 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.leosal.medrep.entity.Education;
+import com.leosal.medrep.dto.EducTypeDTO;
 
 @Service
 public class EducationServiceImpl implements EducationService {
 
-	@Override
-	public Education findById(Long id) {
+	public EducTypeDTO findById(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public List<Education> findAll() {
+	public List<EducTypeDTO> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public Education saveOrUpdate(Education entity) {
+	public EducTypeDTO saveOrUpdate(EducTypeDTO entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public void remove(Education entity) {
+	public void remove(EducTypeDTO entity) {
 		// TODO Auto-generated method stub
 
 	}

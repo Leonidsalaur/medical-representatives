@@ -1,0 +1,107 @@
+set sql_safe_updates=0;
+
+ALTER TABLE `worwagpharma`.`adverts` 
+CHANGE COLUMN `bar_code` `bar_code` VARCHAR(20) NULL DEFAULT NULL ;
+
+ALTER TABLE `worwagpharma`.`products` 
+CHANGE COLUMN `bar_code` `bar_code` VARCHAR(20) NULL DEFAULT NULL ;
+
+
+CREATE TABLE `worwagpharma`.`event_gifts` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `advert_id` INT NULL,
+  `event_id` INT NULL,
+  `quantity` INT NULL,
+  PRIMARY KEY (`id`));
+  
+ insert into event_gifts(event_id, advert_id, quantity) select event_id, gift_id, quantity from event_adverts where gift_id>0;
+ 
+ CREATE TABLE `worwagpharma`.`event_products` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `event_id` INT NULL,
+  `product_id` INT NULL,
+  `quantity` INT NULL,
+  PRIMARY KEY (`id`));
+  
+insert into event_products(event_id, product_id, quantity) select event_id, prod_id, quantity from event_adverts where prod_id>0;
+  
+ALTER TABLE `worwagpharma`.`event_types` 
+CHANGE COLUMN `groupEvent` `group_event` TINYINT(4) NULL DEFAULT '0' ;
+
+ALTER TABLE `worwagpharma`.`institutions` 
+CHANGE COLUMN `code` `code` VARCHAR(20) NOT NULL ;
+
+ALTER TABLE `worwagpharma`.`institutions` 
+ADD COLUMN `distributor` TINYINT(4) NULL DEFAULT '0' AFTER `active`;
+
+update institutions set distributor=1 where inst_type_id=10000;
+
+ALTER TABLE `worwagpharma`.`person_privs` 
+ADD COLUMN `id` INT NOT NULL AUTO_INCREMENT AFTER `priv_id`,
+ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `worwagpharma`.`persons` 
+CHANGE COLUMN `fiscal_code` `fiscal_code` VARCHAR(20) NULL DEFAULT NULL ;
+
+ALTER TABLE `worwagpharma`.`persons` 
+CHANGE COLUMN `sex` `sex` VARCHAR(1) NULL DEFAULT NULL ;
+
+update persons set persons.education_id=null where persons.education_id=0;
+update persons set persons.fiscal_code=null where persons.fiscal_code='0';
+update persons set persons.speciality_id_1=null where persons.speciality_id_1=0;
+update persons set persons.speciality_id_2=null where persons.speciality_id_2=0;
+update persons set persons.school_id=null where persons.school_id=0;
+update persons set persons.user_type_id=5 where persons.user_type_id=0;
+
+update institutions set institutions.region_id=(select id from regions r where r.name='_Undefined') where institutions.region_id=0;
+
+CREATE TABLE `worwagpharma`.`roles` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `role` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+
+insert into worwagpharma.roles(role) values ('ADMIN');
+insert into worwagpharma.roles(role) values ('USER');
+insert into worwagpharma.roles(role) values ('OPERATOR');
+
+CREATE TABLE `worwagpharma`.`user_roles` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` INT NULL,
+  `role_id` INT NULL,
+  PRIMARY KEY (`id`));
+  
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(45) DEFAULT NULL,
+  `midname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `login` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `fiscal_code` varchar(20) DEFAULT NULL,
+  `sex` varchar(1) DEFAULT NULL,
+  `speciality_id_1` int(11) DEFAULT NULL,
+  `speciality_id_2` int(11) DEFAULT NULL,
+  `work_phone` varchar(45) DEFAULT NULL,
+  `mobile_phone` varchar(45) DEFAULT NULL,
+  `home_phone` varchar(45) DEFAULT NULL,
+  `address` varchar(150) DEFAULT NULL,
+  `birthday` date DEFAULT NULL,
+  `hire_date` date DEFAULT NULL,
+  `education_id` int(11) DEFAULT NULL,
+  `school_id` int(11) DEFAULT NULL,
+  `mail` varchar(100) DEFAULT NULL,
+  `comment` text,
+  PRIMARY KEY (`id`));
+
+insert into worwagpharma.users (
+  `firstname`,`midname`,`lastname`,`login`,`password`,`fiscal_code`,`sex`,`speciality_id_1`,
+  `speciality_id_2`,`work_phone`,`mobile_phone`,`home_phone`,`address`,`birthday`,`hire_date`,`education_id`,`school_id`,`mail`,`comment`)
+SELECT `firstname`,`midname`,`lastname`,`login`,`password`,`fiscal_code`,`sex`,`speciality_id_1`,
+  `speciality_id_2`,`work_phone`,`mobile_phone`,`home_phone`,`address`,`birthday`,`hire_date`,`education_id`,`school_id`,`mail`,`comment` FROM worwagpharma.persons p WHERE p.login IS NOT NULL
+
+insert into worwagpharma.user_roles (user_id, role_id)
+SELECT users.id, roles.id from users join roles on roles.role='USER';
+
+update regions set rep_id=(SELECT u.id from users u join persons p on u.login=p.login where p.id=rep_id);
+
+update institutions set inst_type_id=1 where inst_type_id=0;

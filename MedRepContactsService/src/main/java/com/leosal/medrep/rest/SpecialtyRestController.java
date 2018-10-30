@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.leosal.medrep.dto.SpecialtyDTO;
 import com.leosal.medrep.entity.Specialty;
 import com.leosal.medrep.services.SpecialtyService;
 
@@ -21,25 +22,25 @@ public class SpecialtyRestController {
 
 	@RequestMapping("/find")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR') or hasAuthority('ROLE_USER')")
-	public @ResponseBody Specialty findById(@RequestParam Long id) {
+	public @ResponseBody SpecialtyDTO findById(@RequestParam Integer id) {
 		return specialtyService.findById(id);
 	}
 
 	@RequestMapping("/findall")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR') or hasAuthority('ROLE_USER')")
-	public @ResponseBody List<Specialty> findAll() {
+	public @ResponseBody List<SpecialtyDTO> findAll() {
 		return specialtyService.findAll();
 	}
 
 	@RequestMapping("/save")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR')")
-	public @ResponseBody Specialty saveOrUpdate(@RequestBody Specialty entity) {
+	public @ResponseBody SpecialtyDTO saveOrUpdate(@RequestBody SpecialtyDTO entity) {
 		return specialtyService.saveOrUpdate(entity);
 	}
 
 	@RequestMapping("/remove")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN') or hasAuthority('ROLE_OPERATOR')")
-	public void remove(@RequestBody Specialty entity) {
+	public void remove(@RequestBody SpecialtyDTO entity) {
 		specialtyService.remove(entity);
 	}
 

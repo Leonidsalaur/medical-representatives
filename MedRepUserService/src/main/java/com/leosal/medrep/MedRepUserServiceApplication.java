@@ -13,7 +13,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableEurekaClient
 @EnableOAuth2Sso
 @EnableCircuitBreaker
-@ComponentScan(basePackages= {"com.leosal.medrep.configs", "com.leosal.medrep.services", "com.leosal.medrep.rest"})
+@ComponentScan(basePackages= {"com.leosal.medrep.configs", "com.leosal.medrep.services", "com.leosal.medrep.rest", "com.leosal.medrep.entity", "com.leosal.medrep.dao"})
 public class MedRepUserServiceApplication {
 
 	public static void main(String[] args) {

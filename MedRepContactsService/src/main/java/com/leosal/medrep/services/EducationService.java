@@ -1,8 +1,12 @@
 package com.leosal.medrep.services;
 
-import com.leosal.dbutils.GenericCRUD;
-import com.leosal.medrep.entity.Education;
+import java.util.List;
 
-public interface EducationService extends GenericCRUD<Education> {
+import com.leosal.medrep.dto.EducTypeDTO;
 
+public interface EducationService {
+	public EducTypeDTO findById(Integer id);
+	public List<EducTypeDTO> findAll();
+	public EducTypeDTO saveOrUpdate(EducTypeDTO entity);
+	public void remove(EducTypeDTO entity);
 }

@@ -2,11 +2,18 @@ package com.leosal.medrep.services;
 
 import java.util.List;
 
-import com.leosal.dbutils.GenericCRUD;
-import com.leosal.medrep.entity.Contact;
+import com.leosal.medrep.dto.ContactDTO;
 
-public interface ContactsService extends GenericCRUD<Contact> {
+public interface ContactsService {
+	
+	public ContactDTO findById(Integer id);
 
-	List<Contact> findByRepLogin(String login);
+	public List<ContactDTO> findAll();
+
+	public ContactDTO saveOrUpdate(ContactDTO entity);
+
+	public void remove(ContactDTO entity);
+	
+	public List<ContactDTO> findAllByUserLogin(String userLogin);
 
 }
