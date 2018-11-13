@@ -1,8 +1,10 @@
 package com.leosal.medrep.services;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +19,8 @@ public class ContactsServiceImpl implements ContactsService {
 	private ContactDAO contactDAO;
 	
 	public List<ContactDTO> findAll() {
-		List<ContactDTO> result = new ArrayList<>();
-		contactDAO.findAll().forEach(contact -> result.add(new ContactDTO(contact)));
+		List<ContactDTO> result = 
+				StreamSupport.stream(contactDAO.findAll().spliterator(), false).map(contact -> new ContactDTO(contact)).collect(Collectors.toList());
 		
 		return result;
 	}
@@ -42,8 +44,8 @@ public class ContactsServiceImpl implements ContactsService {
 
 	@Override
 	public List<ContactDTO> findAllByUserLogin(String userLogin) {
-		List<ContactDTO> result = new ArrayList<>();
-		contactDAO.findByUserLogin(userLogin).forEach(contact -> result.add(new ContactDTO(contact)));
+		List<ContactDTO> result = 
+				contactDAO.findByUserLogin(userLogin).stream().map(contact -> new ContactDTO(contact)).collect(Collectors.toList());
 		
 		return result;
 	}

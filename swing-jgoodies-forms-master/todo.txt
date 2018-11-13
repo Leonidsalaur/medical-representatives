@@ -1,0 +1,81 @@
+
+JGoodies Forms(tm) To-Do
+========================
+
+o Sanity check: no negative sizes, e.g. no "-7dlu".
+
+o Add tests for the existing syntax parser checks
+
+o Add tests for the new multiplier feature
+
+o Forms 2.0:
+  - make DLU a unit 
+  - change ButtonBarBuilder opaque default to false
+  - replace DLUX and DLUY by DLU and change the Sizes API
+    to hand over the orientation
+
+o Add a reference to the explicit-tablelayout project;
+  update the whitepaper to mention this layout system.
+  
+o Check the visual builder tools for an active project state,
+  especially Gerald Rosenberg's JFormComposer and the
+  SwingEmpire FormBuilder.
+
+o Integrate Karl Tauber's customization code
+
+o Consider adding a second set of factory methods
+  to the Button*Factories that use Actions as parameters.
+  
+o Add more examples to constructors and frequently used methods.
+
+o Add tutorial examples that explains how to align labels with text areas.
+  Much like the examples "Building - Custom Rows" and "Building - "Custom Areas".
+
+o Add exercise 8 from the JGoodies Training to 
+  the tutorial's pitfalls section.
+  
+o Add an example where the DefaultFormBuilder 
+  is more complex than a PanelBuilder.
+
+o Add custom ComponentFactory example
+
+o Consider replacing FormLayout#insertColumn by #addColumn
+  with a column range of [1, columnCount].
+
+o Move example title and comment from the Forms Demo
+  to the examples.
+  
+o Extend unit tests:
+   + test rounding behavior
+   + test computed bounds
+   + test the resizing behavior
+o Overhaul the titled separator:
+   + honor the component orientation 
+   + get title font and color from a TitledBorder, not the UIDefaults
+o Improve parser error messages
+o Improve DefaultFormBuilder's support for dynamically
+  added custom rows
+  
+o Mac OS X:
+  + AquaLayoutStyle
+  + TitledSeparator font plain, not bold?
+  
+  
+o Documentation:
+  + Write a tutorial
+  + Explain #add and #append builder naming conventions
+    and their contracts.
+  + Provide the JavaDocs online at forms.dev.java.net or JGoodies.com
+  
+o Discussions:
+  + logical sizes
+  + requirements for perceived bounds and font baseline alignment
+  + powerful sizing specification beyond min/pref/max.
+    May map a component size to a fitness value
+    so one can specify a preferred range, not just a single value.
+  
+o Consider the following extensions/changes:
+  + add PanelBuilder.getRemainingColumns()
+  + DefaultFormBuilder.appendComponentRow(RowSpec)
+  
+  

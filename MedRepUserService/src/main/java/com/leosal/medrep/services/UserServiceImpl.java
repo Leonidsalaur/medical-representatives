@@ -1,7 +1,7 @@
 package com.leosal.medrep.services;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,10 +24,7 @@ public class UserServiceImpl implements UserService {
 
 	public List<MedRepUserDTO> findAll() {
 		List<MedrepUser> daoList = userDAO.findUsers();
-		
-		List<MedRepUserDTO> result = new ArrayList<MedRepUserDTO>();
-		
-		daoList.forEach(user -> result.add(new MedRepUserDTO(user)));
+		List<MedRepUserDTO> result =daoList.stream().map(user -> new MedRepUserDTO(user)).collect(Collectors.toList());
 		
 		return result;
 	}
