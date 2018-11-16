@@ -37,7 +37,7 @@ public class Region implements DBEntity, Serializable,
 	//bi-directional many-to-one association to Person
 	@ManyToOne
 	@JoinColumn(name="rep_id")
-	private Person person;
+	private MedrepUser user;
 
 	public Region() {
 	}
@@ -102,14 +102,15 @@ public class Region implements DBEntity, Serializable,
 		return personsRegion;
 	}
 
-	public Person getPerson() {
-		return this.person;
+	
+	public MedrepUser getUser() {
+		return user;
 	}
 
-	public void setPerson(Person person) {
-		this.person = person;
+	public void setUser(MedrepUser user) {
+		this.user = user;
 	}
-	
+
 	@Override
 	public int compareTo(Region o) {
 		

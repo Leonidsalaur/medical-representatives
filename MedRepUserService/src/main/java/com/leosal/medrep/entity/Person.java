@@ -147,10 +147,6 @@ public class Person implements DBEntity, Serializable,
 	@OneToMany(mappedBy="person")
 	private Set<PersonsRegion> personsRegions;
 
-	//bi-directional many-to-one association to Region
-	@OneToMany(mappedBy="person")
-	private Set<Region> regions;
-
 	public Person() {
 	}
 
@@ -529,28 +525,6 @@ public class Person implements DBEntity, Serializable,
 		personsRegion.setPerson(null);
 
 		return personsRegion;
-	}
-
-	public Set<Region> getRegions() {
-		return this.regions;
-	}
-
-	public void setRegions(Set<Region> regions) {
-		this.regions = regions;
-	}
-
-	public Region addRegion(Region region) {
-		getRegions().add(region);
-		region.setPerson(this);
-
-		return region;
-	}
-
-	public Region removeRegion(Region region) {
-		getRegions().remove(region);
-		region.setPerson(null);
-
-		return region;
 	}
 
 	@Override
