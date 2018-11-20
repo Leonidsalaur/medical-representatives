@@ -1,1 +1,4 @@
 .metadata/
+*.log
+*.gz
+*.log
