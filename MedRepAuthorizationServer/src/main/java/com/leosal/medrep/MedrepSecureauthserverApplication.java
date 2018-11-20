@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableResourceServer
 @EnableAuthorizationServer
 @RestController
-@ComponentScan(basePackages= {"com.leosal.medrep.configs", "com.leosal.medrep.services"})
+@ComponentScan(basePackages= {"com.leosal.medrep.config", "com.leosal.medrep.services"})
 public class MedrepSecureauthserverApplication  {
 
 	public static void main(String[] args) {

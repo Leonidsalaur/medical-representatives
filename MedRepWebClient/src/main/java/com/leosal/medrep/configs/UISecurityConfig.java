@@ -10,12 +10,15 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 public class UISecurityConfig extends WebSecurityConfigurerAdapter {
 	 @Override
 	  protected void configure(HttpSecurity http) throws Exception {
-	    http
-	      .antMatcher("/**")
-	      .authorizeRequests()
-	        .antMatchers("/", "/login**")
-	        .permitAll()
-	      .anyRequest()
-	        .authenticated();
+//		 http.formLogin().permitAll().and().authorizeRequests()
+//         .antMatchers("/login**","/index.html").permitAll().anyRequest()
+//         .authenticated().and().csrf().disable();
+		 
+		 http.formLogin().loginPage("/index.xhtml").permitAll()
+		 .and()
+		 .authorizeRequests()
+		 //.antMatchers("/login", "/index.xhtml").permitAll()
+		 .anyRequest().authenticated();
+	    System.out.println("UISecurityConfig.HttpSecurity configured");
 	  }
 }
