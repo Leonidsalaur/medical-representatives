@@ -29,7 +29,7 @@ public class MedRepUserDTO implements Serializable{
 	
 	public MedRepUserDTO(MedrepUser user) {
 		super();
-		this.id = user.getId();
+		this.id = user.getId().intValue();
 		this.login = user.getLogin();
 		this.password = user.getPassword();
 		this.firstName = user.getFirstname();

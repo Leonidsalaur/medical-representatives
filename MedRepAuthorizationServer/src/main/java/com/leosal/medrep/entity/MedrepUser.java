@@ -67,11 +67,9 @@ public class MedrepUser implements DBEntity{
 			@JoinColumn(name="role_id")
 			}
 		)
-	
-	
 	private Set<Role> roles;
 
-	public Integer getId() {
+	public Number getId() {
 		return id;
 	}
 

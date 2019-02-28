@@ -36,7 +36,7 @@ public class Contact implements DBEntity, Serializable,
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 
 	private String address;
 
@@ -138,11 +138,11 @@ public class Contact implements DBEntity, Serializable,
 	public Contact() {
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return this.id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
