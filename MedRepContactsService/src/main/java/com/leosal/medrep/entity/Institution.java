@@ -29,7 +29,7 @@ public class Institution implements DBEntity, Serializable,
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 
 	private byte active;
 
@@ -53,11 +53,11 @@ public class Institution implements DBEntity, Serializable,
 	public Institution() {
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return this.id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

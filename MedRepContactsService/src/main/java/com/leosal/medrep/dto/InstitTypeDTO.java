@@ -4,7 +4,7 @@ import com.leosal.medrep.entity.InstitType;
 import com.leosal.medrep.entity.Specialty;
 
 public class InstitTypeDTO {
-	private Integer id;
+	private Long id;
 	private String name;
 	
 	public InstitTypeDTO() {
@@ -20,11 +20,11 @@ public class InstitTypeDTO {
 		}
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

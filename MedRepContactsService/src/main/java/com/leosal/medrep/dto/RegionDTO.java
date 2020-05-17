@@ -4,7 +4,7 @@ import com.leosal.medrep.entity.Region;
 import com.leosal.medrep.entity.Specialty;
 
 public class RegionDTO {
-	private Integer id;
+	private Long id;
 	private String name;
 	
 	public RegionDTO() {
@@ -20,11 +20,11 @@ public class RegionDTO {
 		}
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

@@ -21,7 +21,7 @@ public class MedrepUser implements DBEntity{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	@Column
 	private String address;
 	@Temporal(TemporalType.DATE)
@@ -57,11 +57,11 @@ public class MedrepUser implements DBEntity{
 	@OneToMany(mappedBy="user")
 	private Set<Region> regions;
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

@@ -53,7 +53,7 @@ public class MedrepUser implements DBEntity{
 	@Column
 	private String password;
 	@Column
-	private String sex;
+	private char sex;
 	@Column(name="work_phone")
 	private String workPhone;
 
@@ -181,11 +181,11 @@ public class MedrepUser implements DBEntity{
 		this.password = password;
 	}
 
-	public String getSex() {
+	public char getSex() {
 		return sex;
 	}
 
-	public void setSex(String sex) {
+	public void setSex(char sex) {
 		this.sex = sex;
 	}
 

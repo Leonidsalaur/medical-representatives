@@ -25,7 +25,7 @@ public class EventType implements DBEntity, Serializable,
 	private Integer id;
 
 	@Column(name="group_event")
-	private byte groupEvent;
+	private Boolean groupEvent;
 
 	private String name;
 
@@ -44,11 +44,11 @@ public class EventType implements DBEntity, Serializable,
 		this.id = id;
 	}
 
-	public byte getGroupEvent() {
+	public Boolean getGroupEvent() {
 		return this.groupEvent;
 	}
 
-	public void setGroupEvent(byte groupEvent) {
+	public void setGroupEvent(Boolean groupEvent) {
 		this.groupEvent = groupEvent;
 	}
 

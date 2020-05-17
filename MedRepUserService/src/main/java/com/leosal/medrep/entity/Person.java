@@ -43,7 +43,7 @@ public class Person implements DBEntity, Serializable,
 	private String firstname;
 
 	@Column(name="fiscal_code")
-	private String fiscalCode;
+	private Long fiscalCode; //fixme change type to string
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="hire_date")
@@ -72,7 +72,7 @@ public class Person implements DBEntity, Serializable,
 
 	private String password;
 
-	private String sex;
+	private Character sex;
 
 	@Column(name="target_product")
 	private String targetProduct;
@@ -206,11 +206,11 @@ public class Person implements DBEntity, Serializable,
 		this.firstname = firstname;
 	}
 
-	public String getFiscalCode() {
+	public Long getFiscalCode() {
 		return this.fiscalCode;
 	}
 
-	public void setFiscalCode(String fiscalCode) {
+	public void setFiscalCode(Long fiscalCode) {
 		this.fiscalCode = fiscalCode;
 	}
 
@@ -294,11 +294,11 @@ public class Person implements DBEntity, Serializable,
 		this.password = password;
 	}
 
-	public String getSex() {
+	public Character getSex() {
 		return this.sex;
 	}
 
-	public void setSex(String sex) {
+	public void setSex(Character sex) {
 		this.sex = sex;
 	}
 

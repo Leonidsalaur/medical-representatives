@@ -15,31 +15,29 @@ import javax.persistence.Table;
 
 import com.leosal.dbutils.DBEntity;
 
-
 /**
  * The persistent class for the adverts database table.
  * 
  */
 @Entity
-@Table(name="adverts") 
-@NamedQuery(name="Advert.findAll", query="SELECT a FROM Advert a")
-public class Advert implements DBEntity, Serializable,
-	Comparable<Advert>{
+@Table(name = "adverts")
+@NamedQuery(name = "Advert.findAll", query = "SELECT a FROM Advert a")
+public class Advert implements DBEntity, Serializable, Comparable<Advert> {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@Column(name="bar_code")
-	private String barCode;
+	@Column(name = "bar_code")
+	private Long barCode; // fixme set type to String
 
 	private String name;
 
 	private float price;
 
-	//bi-directional many-to-one association to EventGift
-	@OneToMany(mappedBy="advert")
+	// bi-directional many-to-one association to EventGift
+	@OneToMany(mappedBy = "advert")
 	private Set<EventGift> eventGifts;
 
 	public Advert() {
@@ -53,11 +51,11 @@ public class Advert implements DBEntity, Serializable,
 		this.id = id;
 	}
 
-	public String getBarCode() {
+	public Long getBarCode() {
 		return this.barCode;
 	}
 
-	public void setBarCode(String barCode) {
+	public void setBarCode(Long barCode) {
 		this.barCode = barCode;
 	}
 
@@ -98,38 +96,34 @@ public class Advert implements DBEntity, Serializable,
 
 		return eventGift;
 	}
-	
+
 	@Override
 	public int compareTo(Advert o) {
-		
+
 		return this.getId().compareTo(o.getId());
 	}
-	
+
 	@Override
-	 public int hashCode()
-	 {
-	    final int PRIME = 31;
-	    int result = 1;
-	    result = PRIME * result + getId().intValue();
-	    return result;
-	 }
-	
+	public int hashCode() {
+		final int PRIME = 31;
+		int result = 1;
+		result = PRIME * result + getId().intValue();
+		return result;
+	}
+
 	@Override
 	public boolean equals(Object o) {
-        if(o == null)
-        {
-            return false;
-        }
-        if (o == this)
-        {
-           return true;
-        }
-        if (getClass() != o.getClass())
-        {
-            return false;
-        }
-        Advert e = (Advert) o;
-        return (this.getId().equals(e.getId()));
+		if (o == null) {
+			return false;
+		}
+		if (o == this) {
+			return true;
+		}
+		if (getClass() != o.getClass()) {
+			return false;
+		}
+		Advert e = (Advert) o;
+		return (this.getId().equals(e.getId()));
 	}
 
 }

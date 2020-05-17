@@ -26,7 +26,7 @@ public class Product implements DBEntity, Serializable,
 	private Integer id;
 
 	@Column(name="bar_code")
-	private String barCode;
+	private Long barCode; //fixme change type to String
 
 	private String name;
 
@@ -55,11 +55,11 @@ public class Product implements DBEntity, Serializable,
 		this.id = id;
 	}
 
-	public String getBarCode() {
+	public Long getBarCode() {
 		return this.barCode;
 	}
 
-	public void setBarCode(String barCode) {
+	public void setBarCode(Long barCode) {
 		this.barCode = barCode;
 	}
 

@@ -13,7 +13,7 @@ import com.leosal.medrep.entity.Specialty;
 import com.leosal.medrep.entity.University;
 
 public class ContactDTO {
-	private Integer id;
+	private Long id;
 	private String address;
 	private Date birthday;
 	private int cardioPatients;
@@ -80,11 +80,11 @@ public class ContactDTO {
 		this.personType = new PersonTypeDTO(contact.getPersonType());
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

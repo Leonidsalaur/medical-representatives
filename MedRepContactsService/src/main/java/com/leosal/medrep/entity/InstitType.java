@@ -22,7 +22,7 @@ public class InstitType implements DBEntity, Serializable,
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 
 	private String name;
 
@@ -32,11 +32,11 @@ public class InstitType implements DBEntity, Serializable,
 	public InstitType() {
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return this.id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

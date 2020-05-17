@@ -3,7 +3,7 @@ package com.leosal.medrep.dto;
 import com.leosal.medrep.entity.Specialty;
 
 public class SpecialtyDTO {
-	private Integer id;
+	private Long id;
 	private String name;
 	
 	public SpecialtyDTO() {
@@ -19,11 +19,11 @@ public class SpecialtyDTO {
 		}
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

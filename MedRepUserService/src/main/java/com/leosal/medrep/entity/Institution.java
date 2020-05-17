@@ -35,7 +35,7 @@ public class Institution implements DBEntity, Serializable,
 
 	private byte active;
 
-	private String code;
+	private Long code; //FIXME change filed type to string
 
 	private byte distributor;
 
@@ -93,11 +93,11 @@ public class Institution implements DBEntity, Serializable,
 		this.active = active;
 	}
 
-	public String getCode() {
+	public Long getCode() {
 		return this.code;
 	}
 
-	public void setCode(String code) {
+	public void setCode(Long code) {
 		this.code = code;
 	}
 

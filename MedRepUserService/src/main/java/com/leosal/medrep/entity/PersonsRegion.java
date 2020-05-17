@@ -24,10 +24,12 @@ public class PersonsRegion implements DBEntity, Serializable,
 
 	//bi-directional many-to-one association to Person
 	@ManyToOne
+	@JoinColumn(name="person_id")
 	private Person person;
 
 	//bi-directional many-to-one association to Region
 	@ManyToOne
+	@JoinColumn(name="region_id")
 	private Region region;
 
 	public PersonsRegion() {

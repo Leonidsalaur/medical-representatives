@@ -3,7 +3,7 @@ package com.leosal.medrep.dto;
 import com.leosal.medrep.entity.University;
 
 public class UniversityDTO {
-	private Integer id;
+	private Long id;
 	private String name;
 	
 	public UniversityDTO() {
@@ -20,11 +20,11 @@ public class UniversityDTO {
 		
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

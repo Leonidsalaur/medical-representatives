@@ -3,7 +3,7 @@ package com.leosal.medrep.dto;
 import com.leosal.medrep.entity.Institution;
 
 public class InstitutionDTO {
-	private Integer id;
+	private Long id;
 	private byte active;
 	private String code;
 	private boolean distributor;
@@ -30,17 +30,17 @@ public class InstitutionDTO {
 		
 	}
 	
-	public InstitutionDTO(Integer id, String name) {
+	public InstitutionDTO(Long id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
